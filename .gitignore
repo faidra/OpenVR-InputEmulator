@@ -3,3 +3,5 @@
 /build/*
 /Release/*
 /Debug/*
+.vs/
+*.vcxproj.user
