@@ -1903,3 +1903,29 @@ AnalogInputRemapping VRInputEmulator::getAnalogInputRemapping(uint32_t deviceId,
 
 
 } // end namespace vrinputemulator
+
+vrinputemulator::VRInputEmulator* CreateVRInputEmulator()
+{
+	return new vrinputemulator::VRInputEmulator();
+}
+void Connect(vrinputemulator::VRInputEmulator* instance)
+{
+	instance->connect();
+}
+void Disconnect(vrinputemulator::VRInputEmulator* instance)
+{
+	instance->disconnect();
+}
+void DeleteVRInputEmulator(vrinputemulator::VRInputEmulator* instance)
+{
+	delete instance;
+}
+void EnableDeviceOffsets(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, bool enable, bool modal)
+{
+	instance->enableDeviceOffsets(deviceId, enable, modal);
+}
+void SetWorldFromDriverTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal)
+{
+	vr::HmdVector3d_t pos = { x, y, z };
+	instance->setWorldFromDriverTranslationOffset(deviceId, pos, modal);
+}

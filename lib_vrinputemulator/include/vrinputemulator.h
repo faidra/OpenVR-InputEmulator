@@ -228,3 +228,13 @@ private:
 
 } // end namespace vrinputemulator
 
+
+extern "C"
+{
+	__declspec(dllexport) vrinputemulator::VRInputEmulator* CreateVRInputEmulator();
+	__declspec(dllexport) void Connect(vrinputemulator::VRInputEmulator* instance);
+	__declspec(dllexport) void Disconnect(vrinputemulator::VRInputEmulator* instance);
+	__declspec(dllexport) void DeleteVRInputEmulator(vrinputemulator::VRInputEmulator* instance);
+	__declspec(dllexport) void EnableDeviceOffsets(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, bool enable, bool modal);
+	__declspec(dllexport) void SetWorldFromDriverTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal);
+}
