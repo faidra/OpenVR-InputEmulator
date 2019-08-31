@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_vrinputemulator", "lib_vrinputemulator\lib_vrinputemulator.vcxproj", "{05AC9994-2B63-4DE5-ABF3-95CE346F3A64}"
 EndProject
@@ -65,5 +65,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0828A60-A3AF-456D-AF3A-A49FB65798E0}
 	EndGlobalSection
 EndGlobal
