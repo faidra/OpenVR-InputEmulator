@@ -236,5 +236,10 @@ extern "C"
 	__declspec(dllexport) void Disconnect(vrinputemulator::VRInputEmulator* instance);
 	__declspec(dllexport) void DeleteVRInputEmulator(vrinputemulator::VRInputEmulator* instance);
 	__declspec(dllexport) void EnableDeviceOffsets(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, bool enable, bool modal);
-	__declspec(dllexport) void SetWorldFromDriverTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal);
+	__declspec(dllexport) void SetWorldFromDriverRotationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float w, float x, float y, float z, bool modal = true);
+	__declspec(dllexport) void SetWorldFromDriverTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal = true);
+	__declspec(dllexport) void SetDriverFromHeadRotationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float w, float x, float y, float z, bool modal = true);
+	__declspec(dllexport) void SetDriverFromHeadTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal = true);
+	__declspec(dllexport) void SetDriverRotationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float w, float x, float y, float z, bool modal = true);
+	__declspec(dllexport) void SetDriverTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal = true);
 }

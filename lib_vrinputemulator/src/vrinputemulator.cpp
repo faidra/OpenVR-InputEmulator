@@ -1924,8 +1924,27 @@ void EnableDeviceOffsets(vrinputemulator::VRInputEmulator* instance, uint32_t de
 {
 	instance->enableDeviceOffsets(deviceId, enable, modal);
 }
+void SetWorldFromDriverRotationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float w, float x, float y, float z, bool modal)
+{
+	instance->setWorldFromDriverRotationOffset(deviceId, { w, x, y, z }, modal);
+}
 void SetWorldFromDriverTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal)
 {
-	vr::HmdVector3d_t pos = { x, y, z };
-	instance->setWorldFromDriverTranslationOffset(deviceId, pos, modal);
+	instance->setWorldFromDriverTranslationOffset(deviceId, { x, y, z }, modal);
+}
+void SetDriverFromHeadRotationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float w, float x, float y, float z, bool modal)
+{
+	instance->setDriverFromHeadRotationOffset(deviceId, { w, x, y, z }, modal);
+}
+void SetDriverFromHeadTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal)
+{
+	instance->setDriverFromHeadTranslationOffset(deviceId, { x, y, z }, modal);
+}
+void SetDriverRotationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float w, float x, float y, float z, bool modal)
+{
+	instance->setDriverRotationOffset(deviceId, { w, x, y, z }, modal);
+}
+void SetDriverTranslationOffset(vrinputemulator::VRInputEmulator* instance, uint32_t deviceId, float x, float y, float z, bool modal)
+{
+	instance->setDriverTranslationOffset(deviceId, { x, y, z }, modal);
 }
