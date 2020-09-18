@@ -28,13 +28,15 @@ void printHelp(int argc, const char* argv[]) {
 
 int main(int argc, const char* argv[]) {
 	int retval = 0;
-	if (argc <= 1) {
+	if (argc <= 1 && false) {
 		std::cout << "Error: No Arguments given." << std::endl;
 		printHelp(argc, argv);
 		exit(1);
 	}
 
 	try {
+		listVirtual(argc, argv);
+
 		if (argc == 1 || std::strcmp(argv[1], "help") == 0) {
 			printHelp(argc, argv);
 		} else if (std::strcmp(argv[1], "listdevices") == 0) {
