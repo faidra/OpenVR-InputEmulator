@@ -1,5 +1,6 @@
 /third-party/LeapSDK/*
 /third-party/boost_1_74_0/*
+/third-party/boost_1_74_0
 /build/*
 /Release/*
 /Debug/*
